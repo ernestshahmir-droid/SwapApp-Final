@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4F6F9">
+
+    <!-- Top App Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1D9E75"
+        android:padding="16dp"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Post a New Skill"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="1dp"
+            app:strokeColor="#E5E7EB"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="32dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Skill Title" android:textStyle="bold" android:textColor="#6B7280" />
+                <EditText android:id="@+id/editSkillTitle" android:layout_width="match_parent" android:layout_height="48dp" android:hint="e.g. Learn Python Basics" android:layout_marginBottom="16dp" />
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Category" android:textStyle="bold" android:textColor="#6B7280" />
+                <Spinner android:id="@+id/spinnerCategory" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginBottom="16dp" />
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Session Duration" android:textStyle="bold" android:textColor="#6B7280" />
+                <Spinner android:id="@+id/spinnerDuration" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginBottom="16dp" />
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Experience Level" android:textStyle="bold" android:textColor="#6B7280" />
+                <Spinner android:id="@+id/spinnerLevel" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginBottom="16dp" />
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Delivery Mode" android:textStyle="bold" android:textColor="#6B7280" />
+                <Spinner android:id="@+id/spinnerDelivery" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginBottom="16dp" />
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Description" android:textStyle="bold" android:textColor="#6B7280" />
+                <EditText android:id="@+id/editSkillDesc" android:layout_width="match_parent" android:layout_height="100dp" android:gravity="top|start" android:inputType="textMultiLine" android:hint="What will the learner achieve?" android:layout_marginBottom="24dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPublishSkill"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="Publish Skill"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#1D9E75"
+                    app:cornerRadius="12dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </ScrollView>
+</LinearLayout>
